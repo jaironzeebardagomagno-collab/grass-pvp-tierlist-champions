@@ -491,3 +491,214 @@ input {
 
     box-shadow:
         0 
+
+
+   /* =========================================
+   MCTIERS STYLE KIT ICONS
+   ========================================= */
+
+.player-tiers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 22px;
+}
+
+
+/* SINGLE KIT */
+
+.tier-badge {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 5px;
+
+    min-width: 58px;
+
+    background: transparent;
+
+    border: none;
+
+    padding: 0;
+}
+
+
+/* ROUND ICON */
+
+.kit-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #18211c 0%,
+            #0b100d 72%
+        );
+
+    border: 3px solid #202b24;
+
+    box-shadow:
+        0 0 0 2px #090e0b,
+        0 4px 12px rgba(0,0,0,0.35);
+
+    overflow: hidden;
+}
+
+
+/* ACTUAL MINECRAFT ICON */
+
+.kit-icon img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    filter:
+        drop-shadow(0 3px 2px rgba(0,0,0,0.6));
+}
+
+
+/* TIER TEXT */
+
+.tier-badge strong {
+    min-width: 48px;
+
+    padding: 3px 7px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: #182019;
+
+    color: #f2d13c;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   KIT COLORS
+   ========================================= */
+
+.kit-diasmp .kit-icon {
+    border-color: #31c66a;
+}
+
+.kit-uhc .kit-icon {
+    border-color: #e8bd35;
+}
+
+.kit-nethsmp .kit-icon {
+    border-color: #9c55e8;
+}
+
+.kit-nethpot .kit-icon {
+    border-color: #e63d43;
+}
+
+.kit-sword .kit-icon {
+    border-color: #438de8;
+}
+
+.kit-axe .kit-icon {
+    border-color: #36c8b7;
+}
+
+.kit-mace .kit-icon {
+    border-color: #9aa3aa;
+}
+
+.kit-spearmace .kit-icon {
+    border-color: #f18b22;
+}
+
+
+/* =========================================
+   TIER COLORS
+   ========================================= */
+
+.tier-badge.ht1 strong,
+.tier-badge.ht2 strong,
+.tier-badge.ht3 strong,
+.tier-badge.ht4 strong,
+.tier-badge.ht5 strong {
+    color: #f0d33c;
+}
+
+.tier-badge.lt1 strong,
+.tier-badge.lt2 strong,
+.tier-badge.lt3 strong,
+.tier-badge.lt4 strong,
+.tier-badge.lt5 strong {
+    color: #b9c1c8;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.tier-badge:hover .kit-icon {
+    transform: scale(1.07);
+
+    filter:
+        brightness(1.15)
+        drop-shadow(0 3px 4px rgba(0,0,0,0.5));
+}
+
+.tier-badge .kit-icon {
+    transition: 0.18s ease;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .player-tiers {
+        gap: 11px;
+    }
+
+    .tier-badge {
+        min-width: 52px;
+    }
+
+    .kit-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .kit-icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .tier-badge strong {
+        font-size: 13px;
+
+        min-width: 44px;
+    }
+       }
