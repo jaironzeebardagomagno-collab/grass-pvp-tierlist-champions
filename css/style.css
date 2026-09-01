@@ -1,343 +1,493 @@
+/* =========================================
+   GRASS PvP — MCTIERS INSPIRED THEME
+   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0f0c;
-    color: white;
-    line-height: 1.6;
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            #132319 0%,
+            #080d0a 42%,
+            #060a08 100%
+        );
+
+    color: #e8eee9;
+
+    min-height: 100vh;
+
+    line-height: 1.5;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
 }
 
 
-/* NAVBAR */
+/* =========================================
+   NAVBAR
+   ========================================= */
 
 .navbar {
-    min-height: 70px;
+    width: 100%;
+    height: 66px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 7%;
-    background: #101610;
-    border-bottom: 1px solid #263126;
+
+    padding: 0 6%;
+
+    background: rgba(6, 11, 8, 0.94);
+
+    border-bottom: 1px solid #18221b;
+
     position: sticky;
     top: 0;
-    z-index: 100;
+
+    z-index: 999;
+
+    backdrop-filter: blur(14px);
 }
 
 .logo {
-    font-size: 21px;
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #f3f7f4;
+
+    font-size: 19px;
+
     font-weight: 900;
+
+    letter-spacing: -0.4px;
+}
+
+.logo:first-letter {
+    color: #65e72f;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+
+    gap: 8px;
+
+    height: 100%;
 }
 
 .nav-links a {
-    color: #aeb8af;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    color: #9ca69f;
+
+    font-size: 14px;
+
     font-weight: 600;
+
+    border-bottom: 2px solid transparent;
+
+    transition: 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-    color: #62e36f;
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a.active {
+    color: #72ed38;
+
+    border-bottom-color: #72ed38;
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+   ========================================= */
 
 .hero {
     min-height: 570px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     text-align: center;
-    padding: 70px 20px;
+
+    padding: 90px 20px;
 
     background:
         radial-gradient(
-            circle at center,
-            #19331e 0%,
-            #0b0f0c 65%
+            ellipse at center,
+            rgba(54, 126, 48, 0.18),
+            transparent 58%
         );
 }
 
 .hero-content {
-    max-width: 850px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .small-title {
-    color: #62e36f;
-    font-size: 14px;
-    font-weight: bold;
+    color: #6bea35;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
     letter-spacing: 3px;
-    margin-bottom: 15px;
+
+    margin-bottom: 12px;
 }
 
 .hero h1 {
-    font-size: clamp(50px, 10vw, 100px);
-    font-weight: 900;
-    line-height: 1;
+    font-size: clamp(55px, 11vw, 105px);
+
+    line-height: 0.95;
+
+    font-weight: 950;
+
+    letter-spacing: -5px;
+
+    color: #f5f8f6;
+
     margin-bottom: 25px;
+
+    text-shadow:
+        0 0 45px rgba(96, 231, 53, 0.12);
 }
 
 .hero-description {
-    color: #aeb8af;
-    font-size: 18px;
     max-width: 600px;
+
     margin: auto;
+
+    color: #8e9991;
+
+    font-size: 17px;
 }
 
 
-/* BUTTONS */
+/* =========================================
+   BUTTONS
+   ========================================= */
 
 .hero-buttons {
-    margin-top: 35px;
     display: flex;
+
     justify-content: center;
-    gap: 15px;
+
+    align-items: center;
+
+    gap: 12px;
+
     flex-wrap: wrap;
+
+    margin-top: 30px;
 }
 
 .button {
-    display: inline-block;
-    padding: 13px 24px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 21px;
+
     border-radius: 8px;
-    font-weight: bold;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition: 0.2s ease;
 }
 
-.primary {
-    background: #4ed65c;
-    color: #071008;
+.button:hover {
+    transform: translateY(-2px);
 }
 
-.secondary {
-    background: #182019;
-    border: 1px solid #344337;
+.button.primary {
+    background: #69e83a;
+
+    color: #071006;
+
+    box-shadow:
+        0 5px 25px rgba(105, 232, 58, 0.12);
+}
+
+.button.secondary {
+    background: #101812;
+
+    color: #d5ddd7;
+
+    border: 1px solid #29352d;
+}
+
+.button.secondary:hover {
+    border-color: #4b624f;
 }
 
 
-/* SECTIONS */
+/* =========================================
+   SECTIONS
+   ========================================= */
 
 .section {
-    padding: 80px 7%;
+    width: 100%;
+
+    padding: 75px 6%;
 }
 
 .dark-section {
-    background: #101610;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(13, 21, 15, 0.7),
+            rgba(8, 13, 10, 0.8)
+        );
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+
+    margin: 0 auto 42px;
+
+    max-width: 700px;
 }
 
 .section-title p {
-    color: #62e36f;
-    font-size: 13px;
-    font-weight: bold;
+    color: #65e72f;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
     letter-spacing: 2px;
 }
 
 .section-title h2 {
-    font-size: 40px;
-    margin-top: 5px;
+    color: #edf3ee;
+
+    font-size: clamp(30px, 5vw, 44px);
+
+    line-height: 1.1;
+
+    margin: 7px 0 10px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.section-title > p:last-child {
+    color: #808c83;
+
+    font-size: 14px;
+
+    letter-spacing: 0;
 }
 
 
-/* KITS */
+/* =========================================
+   KIT CARDS
+   ========================================= */
 
 .kit-grid {
+    width: 100%;
+
     max-width: 1100px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
 }
 
 .kit-card {
-    background: #131a14;
-    border: 1px solid #29332b;
-    border-radius: 12px;
-    padding: 25px;
+    min-height: 125px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
+
+    padding: 20px 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111a13,
+            #0c120e
+        );
+
+    border: 1px solid #1e2b22;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
 }
 
 .kit-card:hover {
-    border-color: #62e36f;
+    border-color: #4c7a45;
+
+    transform: translateY(-3px);
+
+    background: #121d14;
 }
 
 .kit-card span {
-    display: block;
-    font-size: 35px;
-    margin-bottom: 10px;
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.kit-card h3 {
+    color: #e8eee9;
+
+    font-size: 15px;
+
+    font-weight: 800;
 }
 
 .kit-card p {
-    color: #89948b;
-    font-size: 14px;
+    color: #748077;
+
+    font-size: 12px;
+
+    margin-top: 2px;
 }
 
 
-/* TIERS */
+/* =========================================
+   TIER GRID
+   ========================================= */
 
 .tier-grid {
-    max-width: 1000px;
+    width: 100%;
+
+    max-width: 950px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
 }
 
 .tier-card {
-    background: #141b15;
-    border: 1px solid #2b362d;
-    border-radius: 10px;
-    padding: 22px;
+    padding: 17px 10px;
+
     text-align: center;
+
+    background: #101711;
+
+    border: 1px solid #1e2a21;
+
+    border-radius: 10px;
 }
 
 .tier-card strong {
     display: block;
-    font-size: 25px;
-    color: #62e36f;
+
+    color: #f1d443;
+
+    font-size: 21px;
+
+    font-weight: 900;
 }
 
 .tier-card span {
-    color: #8e9b91;
-    font-size: 12px;
+    color: #6f7b72;
+
+    font-size: 10px;
 }
 
 
-/* CHAMPIONS */
+/* =========================================
+   PLAYER CARDS
+   ========================================= */
 
-.champion-preview {
-    max-width: 750px;
-    margin: auto;
+.player-search {
+    width: 100%;
 
-    background: #121812;
-    border: 1px solid #29332b;
-    border-radius: 12px;
-    overflow: hidden;
+    max-width: 700px;
+
+    margin: 0 auto 30px;
 }
 
-.champion-row {
-    display: grid;
-    grid-template-columns: 60px 1fr 100px;
-    align-items: center;
-    padding: 18px 22px;
-    border-bottom: 1px solid #273027;
+.player-search input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 17px;
+
+    background: #0d1510;
+
+    color: #eaf0eb;
+
+    border: 1px solid #1f2d23;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
 }
 
-.champion-row:last-child {
-    border-bottom: none;
+.player-search input::placeholder {
+    color: #667169;
 }
 
-.rank {
-    font-size: 22px;
-}
+.player-search input:focus {
+    border-color: #5b9b4d;
 
-.player-name {
-    font-weight: bold;
-}
-
-.points {
-    text-align: right;
-    color: #62e36f;
-}
-
-
-/* CENTER */
-
-.center {
-    text-align: center;
-    margin-top: 30px;
-}
-
-
-/* FOOTER */
-
-footer {
-    padding: 45px 20px;
-    text-align: center;
-    background: #080b08;
-    border-top: 1px solid #222a23;
-}
-
-footer p {
-    color: #818b83;
-}
-
-.copyright {
-    margin-top: 15px;
-    font-size: 12px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    .kit-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tier-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 450px) {
-
-    .hero h1 {
-        font-size: 55px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .kit-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tier-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .nav-links {
-        font-size: 13px;
-    }
-
-    .champion-row {
-        grid-template-columns: 45px 1fr 80px;
-        padding: 15px;
-    }
-
-    .points {
-        font-size: 12px;
-    }
-}
+    box-shadow:
+        0 
